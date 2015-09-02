@@ -1,0 +1,10 @@
+node_modules/
+npm-debug.log
+public/fonts/*
+public/images/*
+public/scripts/*
+public/styles/*
+!.keep
+.DS_Store
+*.tmp
+*.swp

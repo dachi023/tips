@@ -1,0 +1,37 @@
+@import 'bootstrap-custom';
+@import 'fa-custom';
+
+$navbar-height: 40px;
+$preview-footer-height: 100px;
+
+body {
+  padding-top: $navbar-height;
+}
+
+.tp-interval-content {
+  margin-top: 3em;
+}
+
+.tp-preview {
+  overflow-x: auto;
+}
+
+.tp-preview-footer {
+  position: fixed;
+  bottom: -$preview-footer-height;
+  height: $preview-footer-height;
+  width: 100%;
+  background-color: rgba(245, 245, 245, 0.7);
+  border-top: 1px solid #ccc;
+  transition: all 0.2s;
+  .container {
+    margin-top: 15px;
+  }
+}
+.tp-preview-footer.open {
+  transform: translate3d(0, -$preview-footer-height, 0);
+}
+
+.tp-padding-footer {
+  padding-bottom: $preview-footer-height;
+}
