@@ -1,20 +1,20 @@
 {
-  "name": "tips",
-  "version": "0.0.0",
-  "description": "",
+  "name": "tips-poi",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dachi023/tips.git"
+    "url": "https://github.com/dachi023/tips-poi.git"
   },
   "author": "dachi023",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dachi023/tips/issues"
+    "url": "https://github.com/dachi023/tips-poi/issues"
   },
-  "homepage": "http://dachi023.github.io/tips",
+  "homepage": "https://dachi023.github.io/tips-poi",
   "devDependencies": {
     "browser-sync": "^2.8.2",
     "browserify": "^11.0.1",
