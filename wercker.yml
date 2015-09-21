@@ -1,11 +1,25 @@
-box: ruby
+box: nodesource/trusty
 build:
     steps:
+        - npm-install
         - script:
-            name: echo
+            name: install global node modules
+            code: npm install -g gulp
+        - script:
+            name: build sources
+            code: gulp build
+        - script:
+            name: echo nodejs information
             code: |
-                echo "hello world!"
+                echo "node version $(node -v) running"
+                echo "npm version $(npm -v) running"
     after-steps:
         - wantedly/pretty-slack-notify:
             webhook_url: $SLACK_WEBHOOK_URL
             channel: status
+deploy:
+    deploy:
+    steps:
+        - lukevivier/gh-pages:
+            token: $GITHUB_TOKEN
+            basedir: public
