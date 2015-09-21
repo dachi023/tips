@@ -1,10 +1,12 @@
-box: nodesource/trusty
+box: simondelacourt/node-ruby-rvm
 build:
     steps:
-        - npm-install
         - script:
             name: install global node modules
-            code: npm install -g gulp
+            code: sudo npm install -g gulp
+        - script:
+            name: install local node modules
+            code: sudo npm install
         - script:
             name: build sources
             code: gulp build
